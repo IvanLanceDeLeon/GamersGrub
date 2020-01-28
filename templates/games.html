@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick-theme.css') }}">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
+<body>
+    <nav>
+        <div class = "logo">
+            <h4>Gamers Grub</h4>
+        </div>
+        <ul class = "nav-links">
+            <li>
+                <a href ="/">Home</a>
+            </li>
+            <li><a href ="/events">Events</a></li>
+            <li><a href ="/games">Games</a></li>
+
+        </ul>
+        <div class = "burger">
+            <div class = "line1"></div>
+            <div class = "line2"></div>
+            <div class = "line3"></div>
+    
+        </div>
+    </nav>
+    <div class="gamesmain">
+        <h2> GAMES </h2>
+        <h3>We've got all the latest and greatest games for PC, Xbox, Playstation, and Nintendo Switch! Check out our catalog below</h3>
+            <div class = "responsive">
+                <img class = "slick" src="{{ url_for('static', filename='img/smash.jpg') }}">
+                <img class = "slick" src="{{ url_for('static', filename='img/lol.jpg') }}">
+                <img class = "slick" src="{{ url_for('static', filename='img/fornite.jpg') }}">
+                <img class = "slick" src="{{ url_for('static', filename='img/mw.jpg') }}">
+            </div>
+            <div class = "PC">
+                <h2> PC Games</h2>
+                <ul>
+                    <li>Fortnite</li>
+                    <li>Apex Legends</li>
+                    <li>Call of Duty : Modern Warfare</li>
+                    <li>League of Legends</li>
+                    <li>Counter Strike: Global Offensive</li>
+                </ul>
+            </div>
+
+            <div class = "switch">
+                <h2>Nintendo Switch</h2>
+                <ul>
+                    <li>Super Smash Bros. Ultimate</li>
+                    <li>Mario Kart 8</li>
+                    <li>Mario Party</li>
+                </ul>
+            </div>
+
+            <div class = "PS4">
+                <h2>Playstation 4</h2>
+                <ul>
+                    <li>Fortnite</li>
+                    <li>Call of Duty:Modern Warfare</li>
+                    <li>Dragonball Fighterz</li>
+                    <li>Trials:Fusion</li>
+
+                </ul>
+            </div>
+            <div class = "Xbox">
+                <h2>Xbox One</h2>
+                <ul>
+                    <li>Fortnite</li>
+                    <li>Call of Duty:Modern Warfare</li>
+                    <li>Dragonball Fighterz</li>
+                    <li>Trials:Fusion</li>
+
+                </ul>
+            </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script type = "text/javascript">
+    $(document).ready(function(){
+        
+    $('.responsive').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+  autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 300,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+    });
+    </script>
+
+
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/slick.js') }}"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/JS.js') }}"></script>
+
+</html>
